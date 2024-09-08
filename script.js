@@ -1,0 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const form = document.getElementById('resumeForm');
+const resumeOutput = document.getElementById('resumeOutput');
+const displayName = document.getElementById('displayName');
+const displayEmail = document.getElementById('displayEmail');
+const displayPhone = document.getElementById('displayPhone');
+const displayEducation = document.getElementById('displayEducation');
+const displaySkills = document.getElementById('displaySkills');
+const displayExperience = document.getElementById('displayExperience');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const education = document.getElementById('education').value;
+    const skills = document.getElementById('skills').value;
+    const experience = document.getElementById('experience').value;
+    resumeOutput.classList.remove('hidden');
+    displayName.textContent = name;
+    displayEmail.textContent = email;
+    displayPhone.textContent = phone;
+    displayEducation.textContent = education;
+    displaySkills.textContent = skills;
+    displayExperience.textContent = experience;
+});
